@@ -48,3 +48,4 @@ Temporary Items
 
 # custom gitignore list
 /node_modules/*
+config.js
