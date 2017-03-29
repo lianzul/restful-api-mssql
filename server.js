@@ -43,13 +43,13 @@ var executeQuery = function(res, query){
 		    // create Request object
 		    var request = new sql.Request();
 		    // query to the database
-		    request.query(query, function (err, res) {
+		    request.query(query, function (err, recordsets, returnValue) {
 		        if (err) {
 		            console.log("Error while querying database :- " + err);
 		    	    res.send(err);
 		        } else {
 		        	console.log(res);
-		            //res.send(res);
+		            res.send(recordsets);
 		        }
 		    });
 		}
